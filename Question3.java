@@ -15,7 +15,7 @@ public class Question3 {
         int result = number * number;
         
         // Print out the result
-        System.out.println(/*"The result of multiplying " + */number /*+ " by itself is: " +*/ result);
+        System.out.println("The result of multiplying " + number + " by itself is: " + result);
         
         // Close the Scanner object to prevent resource leak
         in.close();
