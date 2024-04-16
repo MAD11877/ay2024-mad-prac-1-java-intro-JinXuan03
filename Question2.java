@@ -20,14 +20,13 @@ public class Question2
         double weight = in.nextDouble();
 
 
-        double bmi = calculateBMI(height, weight);
+        double bmi = weight / height*height;
 
 
         System.out.println("Your BMI is: " + bmi);
-        height = in.nextDouble();
 
-        double calculateBMI(double height, double weight) {
-        return weight / (height * height);
-  }
-   
+
+
+
+}
 }
