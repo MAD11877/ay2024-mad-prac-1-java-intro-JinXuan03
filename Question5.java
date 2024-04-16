@@ -27,6 +27,36 @@ public class Question5
      */
      
     Scanner in = new Scanner(System.in);
-    
+    System.out.print("Enter the number of integers: ");
+        int count = in.nextInt();
+
+        int[] numbers = new int[count];
+        for (int i = 0; i < count; i++) {
+            System.out.print("Enter integer " + (i + 1) + ": ");
+            numbers[i] = in.nextInt();
+        }
+
+        int mode = findMode(numbers);
+        System.out.println("Mode: " + mode);
+    }
+
+    public static int findMode(int[] numbers) {
+        int mode = numbers[0];
+        int maxCount = 0;
+
+        for (int i = 0; i < numbers.length; i++) {
+            int count = 0;
+            for (int j = 0; j < numbers.length; j++) {
+                if (numbers[j] == numbers[i]) {
+                    count++;
+                }
+            }
+            if (count > maxCount) {
+                maxCount = count;
+                mode = numbers[i];
+            }
+        }
+
+        return mode;
   }
 }
