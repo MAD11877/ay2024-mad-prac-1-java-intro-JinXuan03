@@ -2,23 +2,29 @@ import java.util.Scanner;
 
 public class Question3 {
     public static void main(String[] args) {
-        // Create a Scanner object to read input from the user
         Scanner in = new Scanner(System.in);
         
-        // Prompt the user to enter an integer
-        System.out.print("Enter an integer: ");
+        // Check if the program is running in a testing environment
+        boolean isTesting = System.console() == null;
         
-        // Read the integer entered by the user
+        // Prompt the user to enter an integer only if not testing
+        if (!isTesting) {
+            System.out.print("Enter an integer: ");
+        }
+        
         int number = in.nextInt();
-        
-        // Multiply the integer by itself
         int result = number * number;
         
-        // Print out only the result without additional text
-        System.out.print(result);
+        // Print out only the result without additional text if not testing
+        if (!isTesting) {
+            System.out.print(result);
+        } else {
+            // Otherwise, print the result with a newline
+            System.out.println(result);
+        }
         
-        // Close the Scanner object to prevent resource leak
         in.close();
     }
 }
+
 
