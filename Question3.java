@@ -6,7 +6,7 @@ public class Question3 {
         Scanner in = new Scanner(System.in);
         
         // Prompt the user to enter an integer
-        //System.out.print("Enter an integer: ");
+        System.out.print("Enter an integer: ");
         
         // Read the integer entered by the user
         int number = in.nextInt();
@@ -14,8 +14,8 @@ public class Question3 {
         // Multiply the integer by itself
         int result = number * number;
         
-        // Print out the result
-        System.out.println("The result of multiplying " + number + " by itself is: " + result);
+        // Print out only the result without additional text
+        System.out.println(result);
         
         // Close the Scanner object to prevent resource leak
         in.close();
