@@ -15,9 +15,10 @@ public class Question3 {
         int result = number * number;
         
         // Print out only the result without additional text
-        System.out.println(result);
+        System.out.print(result);
         
         // Close the Scanner object to prevent resource leak
         in.close();
     }
 }
+
