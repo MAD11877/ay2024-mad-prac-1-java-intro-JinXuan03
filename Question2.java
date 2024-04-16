@@ -25,8 +25,9 @@ public class Question2
 
         System.out.println("Your BMI is: " + bmi);
         height = in.nextDouble();
-  }
-   public static double calculateBMI(double height, double weight) {
+
+        double calculateBMI(double height, double weight) {
         return weight / (height * height);
-}
+  }
+   
 }
